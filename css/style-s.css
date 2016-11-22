@@ -1,0 +1,205 @@
+@charset "utf-8";
+
+/*全体の設定
+---------------------------------------------------------------------------*/
+body {
+	background-color: #FFF;	/*全体の背景色*/
+	background-image: none;	/*背景壁紙を消す*/
+	font-size: 12px;	/*文字サイズ*/
+}
+
+/*コンテナー（HPを囲むブロック）
+---------------------------------------------------------------------------*/
+#container {
+	width: auto;
+}
+/*h1タグの設定*/
+#container h1 {
+	display: none;
+}
+
+/*ヘッダー（サイト名ロゴが入ったブロック）
+---------------------------------------------------------------------------*/
+header {
+	width: auto;
+	height: 90px;	/*ヘッダーの高さ*/
+	background-size: 80%;	/*背景画像をウィンドウに対して80％に*/
+	border: none;
+	border-bottom: 1px solid #FFF;	/*下側の線の幅、線種、色*/
+}
+/*ロゴ画像の設定*/
+header #logo {
+	position: absolute;
+	left: 10px;	/*ヘッダーブロックに対して左から10pxの位置に配置*/
+	top: 30px;	/*ヘッダーブロックに対して上から30pxの位置に配置*/
+}
+header #logo img {
+	width: 60%;		/*ヘッダーに対してロゴ画像を60％の幅に*/
+	height: auto;
+}
+
+/*上部のメインメニュー
+---------------------------------------------------------------------------*/
+/*メニューブロックの設定*/
+nav#menu ul {
+	height: auto;
+	overflow: hidden;
+	margin-bottom: 0;
+}
+/*メニュー１個ごとの設定*/
+nav#menu ul li {
+	width: 50%;
+}
+nav#menu ul li a {
+	border: none;
+	border-bottom: 1px solid #FFF;	/*下側の線の幅、線種、色*/
+}
+/*奇数番目のメニューの設定(※１個目の「ホーム」メニューが非表示になっている為、この場合はサービスとお問い合わせが奇数番目となる。)*/
+nav#menu ul li:nth-child(odd) {
+	border-left: 1px solid #FFF;	/*左側の線の幅、線種、色*/
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+/*１個目の「ホーム」メニューの設定*/
+nav#menu ul li:first-child {
+	display: none;	/*メニュー数を偶数にする為、ホームのみ非表示にしています。表示させたいならこの１行削除。*/
+}
+
+/*コンテンツ（main,subを囲むブロック）
+---------------------------------------------------------------------------*/
+#contents {
+	width: auto;
+}
+
+/*main,subコンテンツ
+---------------------------------------------------------------------------*/
+#main, #sub {
+	float: none;
+	width: auto;
+	margin-bottom: 0;
+}
+#main {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	border: none;
+}
+/*mainコンテンツのh2タグの設定*/
+#main h2 {
+	padding: 9px 10px;	/*上下、左右への余白*/
+}
+/*mainコンテンツのh3タグの設定*/
+#main h3 {
+	padding: 7px 10px 7px 20px;	/*上、右、下、左への余白*/
+}
+#main p {
+	padding: 0.5em 5px 1em;
+}
+#sub {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	border: none;
+}
+
+/*service.html内の各ブロック（※タイプ１）
+---------------------------------------------------------------------------*/
+/*各ボックスの設定*/
+#main section.list1 section {
+	width: 100%;
+	height: auto;
+	float: none;
+	margin-left: 0px;
+	padding-bottom: 25px;
+}
+/*写真の設定*/
+#main section.list1 section figure {
+	padding: 0px;
+	border: none;
+}
+#main section.list1 section figure img {
+	width: 100%;
+}
+
+/*service.html内の各ブロック（※タイプ２）
+---------------------------------------------------------------------------*/
+/*ボックス内の段落タグ設定*/
+#main section.list2 section p {
+	margin-left: 0;
+}
+/*ボックス内の写真設定*/
+#main section.list2 section figure img {
+	float: none;
+	width: 130px;
+	height: 130px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+/*トップページ内「更新情報・お知らせ」ブロック
+---------------------------------------------------------------------------*/
+section#new h2.open {
+	background: url(../images/btn_minus.png) no-repeat right center, -webkit-gradient(linear, left top, left bottom, from(#14b2d9), to(#1194b4));	/*マイナスアイコンとグラデーション*/
+	background: url(../images/btn_minus.png) no-repeat right center, -webkit-linear-gradient(#14b2d9, #1194b4);		/*同上*/
+	background: url(../images/btn_minus.png) no-repeat right center, linear-gradient(#14b2d9, #1194b4);				/*同上*/
+}
+section#new h2.close {
+	background: url(../images/btn_plus.png) no-repeat right center, -webkit-gradient(linear, left top, left bottom, from(#14b2d9), to(#1194b4));	/*プラスアイコンとグラデーション*/
+	background: url(../images/btn_plus.png) no-repeat right center, -webkit-linear-gradient(#14b2d9, #1194b4);			/*同上*/
+	background: url(../images/btn_plus.png) no-repeat right center, linear-gradient(#14b2d9, #1194b4);					/*同上*/
+}
+/*ブロック全体の設定*/
+#new dl {
+	height: auto;
+	padding-left: 5px;
+}
+/*日付設定*/
+#new dt {
+	float: none;
+	width: auto;
+}
+/*記事設定*/
+#new dd {
+	padding-left: 0;
+}
+
+/*テーブル１
+---------------------------------------------------------------------------*/
+/*テーブル内の右側*/
+.ta1 td{
+	width: auto;
+	padding: 2px;
+}
+/*テーブル内の左側の見出し部分*/
+.ta1 th{
+	width: 100px;
+	padding: 2px;
+}
+
+/*その他
+---------------------------------------------------------------------------*/
+/*写真の設定*/
+img.wa {
+	width: 220px;
+	height: auto;
+}
+/*<body class="s-n">指定の場合にsubブロックを表示させない設定*/
+body.s-n #sub {
+	display: none;
+}
+/*メニュー折りたたみ設定*/
+#top #menubar_hdr {
+	display: none;
+}
+#menubar_hdr {
+	display: inline;
+	position: absolute;
+	top: 0px;
+	right: 10px;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#e5e5e5));
+	background-image: -webkit-linear-gradient(#fbfbfb, #e5e5e5);
+	background-image: linear-gradient(#fbfbfb, #e5e5e5);
+	padding: 10px;
+	border: 1px solid #cfcfcf;
+	border-radius: 0px 0px 6px 6px;
+}
